@@ -1,9 +1,9 @@
 //
-//  MMUXYView.m
+//  XYView.h
 //  XY Control
 //
 //  Created by Gary Newby on 11/03/2013.
-//
+//  Copyright (c) 2014 Gary Newby. All rights reserved.
 //
 
 

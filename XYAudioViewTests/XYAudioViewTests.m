@@ -3,7 +3,7 @@
 //  XYViewTestTests
 //
 //  Created by Gary on 12/9/14.
-//  Copyright (c) 2014 Mellowmuse. All rights reserved.
+//  Copyright (c) 2014 Gary Newby. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
