@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Gary Newby. All rights reserved.
 //
 
-#import "XYViewController.h"
+#import "ViewController.h"
 #import "XYView.h"
-#import "XYAVAudioEngine.h"
+#import "BasicAVAudioEngine.h"
 
 
 static NSString * const kXYPANVOL = @"Pan & Volume";
@@ -16,26 +16,26 @@ static NSString * const kXYREVERB = @"Reverb";
 static NSString * const kXYDELAY  = @"Delay";
 
 
-@interface XYViewController () <XYViewDelegate>
+@interface ViewController () <XYViewDelegate>
 
 @property (weak, nonatomic) IBOutlet XYView *xyViewA;
 @property (weak, nonatomic) IBOutlet XYView *xyViewB;
 @property (weak, nonatomic) IBOutlet XYView *xyViewC;
 
 
-@property (nonatomic, strong) XYAVAudioEngine *audioEngine;
+@property (nonatomic, strong) BasicAVAudioEngine *audioEngine;
 
 @end
 
 
-@implementation XYViewController
+@implementation ViewController
 
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     
-    self.audioEngine = [[XYAVAudioEngine alloc] init];
+    self.audioEngine = [[BasicAVAudioEngine alloc] init];
     [self.audioEngine playSoundFile:@"test"];
     
     // XY View
@@ -46,24 +46,6 @@ static NSString * const kXYDELAY  = @"Delay";
     self.xyViewC.delegate = self;
     self.xyViewC.name = kXYDELAY;
     
-    // XY View Constraints
-    NSDictionary *views =  @{@"xyViewA":_xyViewA, @"xyViewB":_xyViewB, @"xyViewC":_xyViewC};
-    CGFloat xyHeight = [self getXYHeight:CGRectGetHeight([UIScreen mainScreen].bounds)];
-    NSDictionary *metrics = @{@"xyHeight":@(xyHeight), @"pad":@10};
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-40-[xyViewA(xyHeight)]-pad-[xyViewB(==xyViewA)]-pad-[xyViewC(==xyViewA)]"
-                                                                      options:0 metrics:metrics views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[xyViewA]-|" options:0 metrics:metrics views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[xyViewB]-|" options:0 metrics:metrics views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[xyViewC]-|" options:0 metrics:metrics views:views]];
-
-}
-
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
-{
-    NSLayoutConstraint *constraint = self.view.constraints[5];
-    
-    // xyViewA height constraint
-    constraint.constant = [self getXYHeight:size.height];
 }
 
 - (CGFloat)getXYHeight:(CGFloat)height

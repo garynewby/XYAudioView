@@ -7,60 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E75BC461A37812700B21E97 /* XYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E75BC3E1A37812700B21E97 /* XYViewController.m */; };
+		4E75BC461A37812700B21E97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E75BC3E1A37812700B21E97 /* ViewController.m */; };
 		4E75BC471A37812700B21E97 /* XYView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E75BC401A37812700B21E97 /* XYView.m */; };
-		4E75BC481A37812700B21E97 /* XYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E75BC421A37812700B21E97 /* XYAppDelegate.m */; };
-		4E75BC491A37812700B21E97 /* XYAVAudioEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E75BC441A37812700B21E97 /* XYAVAudioEngine.m */; };
+		4E75BC481A37812700B21E97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E75BC421A37812700B21E97 /* AppDelegate.m */; };
+		4E75BC491A37812700B21E97 /* BasicAVAudioEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E75BC441A37812700B21E97 /* BasicAVAudioEngine.m */; };
 		4E75BC4C1A37813600B21E97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E75BC4A1A37813600B21E97 /* main.m */; };
-		4E75BC4D1A37813600B21E97 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E75BC4B1A37813600B21E97 /* Info.plist */; };
 		4E75BC521A37816900B21E97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E75BC4E1A37816900B21E97 /* Main.storyboard */; };
 		4E75BC531A37816900B21E97 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E75BC501A37816900B21E97 /* LaunchScreen.xib */; };
 		4E75BC551A37817200B21E97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E75BC541A37817200B21E97 /* Images.xcassets */; };
-		4E75BC571A37824500B21E97 /* XYAudioViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E75BC561A37824500B21E97 /* XYAudioViewTests.m */; };
-		4E75BC591A37824E00B21E97 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E75BC581A37824E00B21E97 /* Info.plist */; };
 		4EAD58881A37A41800202505 /* test.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4E75BC5A1A37882400B21E97 /* test.wav */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4E75BC261A37713B00B21E97 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4E75BC041A37713B00B21E97 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4E75BC0B1A37713B00B21E97;
-			remoteInfo = XYViewTest;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		4E75BC0C1A37713B00B21E97 /* XYAudioView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XYAudioView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E75BC251A37713B00B21E97 /* XYAudioViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XYAudioViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E75BC3E1A37812700B21E97 /* XYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYViewController.m; path = XYAudioView/XYViewController.m; sourceTree = SOURCE_ROOT; };
-		4E75BC3F1A37812700B21E97 /* XYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYViewController.h; path = XYAudioView/XYViewController.h; sourceTree = SOURCE_ROOT; };
+		4E75BC3E1A37812700B21E97 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = XYAudioView/ViewController.m; sourceTree = SOURCE_ROOT; };
+		4E75BC3F1A37812700B21E97 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = XYAudioView/ViewController.h; sourceTree = SOURCE_ROOT; };
 		4E75BC401A37812700B21E97 /* XYView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYView.m; path = XYAudioView/XYView.m; sourceTree = SOURCE_ROOT; };
 		4E75BC411A37812700B21E97 /* XYView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYView.h; path = XYAudioView/XYView.h; sourceTree = SOURCE_ROOT; };
-		4E75BC421A37812700B21E97 /* XYAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYAppDelegate.m; path = XYAudioView/XYAppDelegate.m; sourceTree = SOURCE_ROOT; };
-		4E75BC431A37812700B21E97 /* XYAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYAppDelegate.h; path = XYAudioView/XYAppDelegate.h; sourceTree = SOURCE_ROOT; };
-		4E75BC441A37812700B21E97 /* XYAVAudioEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYAVAudioEngine.m; path = XYAudioView/XYAVAudioEngine.m; sourceTree = SOURCE_ROOT; };
-		4E75BC451A37812700B21E97 /* XYAVAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYAVAudioEngine.h; path = XYAudioView/XYAVAudioEngine.h; sourceTree = SOURCE_ROOT; };
+		4E75BC421A37812700B21E97 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = XYAudioView/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		4E75BC431A37812700B21E97 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = XYAudioView/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		4E75BC441A37812700B21E97 /* BasicAVAudioEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicAVAudioEngine.m; path = XYAudioView/BasicAVAudioEngine.m; sourceTree = SOURCE_ROOT; };
+		4E75BC451A37812700B21E97 /* BasicAVAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicAVAudioEngine.h; path = XYAudioView/BasicAVAudioEngine.h; sourceTree = SOURCE_ROOT; };
 		4E75BC4A1A37813600B21E97 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = XYAudioView/main.m; sourceTree = SOURCE_ROOT; };
 		4E75BC4B1A37813600B21E97 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = XYAudioView/Info.plist; sourceTree = SOURCE_ROOT; };
 		4E75BC4F1A37816900B21E97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = XYAudioView/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E75BC511A37816900B21E97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = XYAudioView/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4E75BC541A37817200B21E97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = XYAudioView/Images.xcassets; sourceTree = "<group>"; };
-		4E75BC561A37824500B21E97 /* XYAudioViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYAudioViewTests.m; path = XYAudioViewTests/XYAudioViewTests.m; sourceTree = SOURCE_ROOT; };
-		4E75BC581A37824E00B21E97 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = XYAudioViewTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		4E75BC5A1A37882400B21E97 /* test.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = test.wav; path = XYAudioView/Sounds/test.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4E75BC091A37713B00B21E97 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E75BC221A37713B00B21E97 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,7 +53,6 @@
 				4E75BC0E1A37713B00B21E97 /* Classes */,
 				4E75BC0F1A37713B00B21E97 /* Supporting Files */,
 				4E75BC351A37715400B21E97 /* Resources */,
-				4E75BC281A37713B00B21E97 /* XYAudioViewTests */,
 				4E75BC0D1A37713B00B21E97 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				4E75BC0C1A37713B00B21E97 /* XYAudioView.app */,
-				4E75BC251A37713B00B21E97 /* XYAudioViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,14 +68,14 @@
 		4E75BC0E1A37713B00B21E97 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4E75BC431A37812700B21E97 /* XYAppDelegate.h */,
-				4E75BC421A37812700B21E97 /* XYAppDelegate.m */,
-				4E75BC3F1A37812700B21E97 /* XYViewController.h */,
-				4E75BC3E1A37812700B21E97 /* XYViewController.m */,
+				4E75BC431A37812700B21E97 /* AppDelegate.h */,
+				4E75BC421A37812700B21E97 /* AppDelegate.m */,
+				4E75BC3F1A37812700B21E97 /* ViewController.h */,
+				4E75BC3E1A37812700B21E97 /* ViewController.m */,
 				4E75BC411A37812700B21E97 /* XYView.h */,
 				4E75BC401A37812700B21E97 /* XYView.m */,
-				4E75BC451A37812700B21E97 /* XYAVAudioEngine.h */,
-				4E75BC441A37812700B21E97 /* XYAVAudioEngine.m */,
+				4E75BC451A37812700B21E97 /* BasicAVAudioEngine.h */,
+				4E75BC441A37812700B21E97 /* BasicAVAudioEngine.m */,
 			);
 			name = Classes;
 			path = XYViewTest;
@@ -114,24 +89,6 @@
 			);
 			name = "Supporting Files";
 			path = XYViewTest;
-			sourceTree = "<group>";
-		};
-		4E75BC281A37713B00B21E97 /* XYAudioViewTests */ = {
-			isa = PBXGroup;
-			children = (
-				4E75BC561A37824500B21E97 /* XYAudioViewTests.m */,
-				4E75BC291A37713B00B21E97 /* Supporting Files */,
-			);
-			name = XYAudioViewTests;
-			path = XYViewTestTests;
-			sourceTree = "<group>";
-		};
-		4E75BC291A37713B00B21E97 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4E75BC581A37824E00B21E97 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		4E75BC351A37715400B21E97 /* Resources */ = {
@@ -165,39 +122,18 @@
 			productReference = 4E75BC0C1A37713B00B21E97 /* XYAudioView.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4E75BC241A37713B00B21E97 /* XYAudioViewTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4E75BC321A37713B00B21E97 /* Build configuration list for PBXNativeTarget "XYAudioViewTests" */;
-			buildPhases = (
-				4E75BC211A37713B00B21E97 /* Sources */,
-				4E75BC221A37713B00B21E97 /* Frameworks */,
-				4E75BC231A37713B00B21E97 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4E75BC271A37713B00B21E97 /* PBXTargetDependency */,
-			);
-			name = XYAudioViewTests;
-			productName = XYViewTestTests;
-			productReference = 4E75BC251A37713B00B21E97 /* XYAudioViewTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		4E75BC041A37713B00B21E97 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Mellowmuse;
 				TargetAttributes = {
 					4E75BC0B1A37713B00B21E97 = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					4E75BC241A37713B00B21E97 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 4E75BC0B1A37713B00B21E97;
+						DevelopmentTeam = RP89MENV25;
 					};
 				};
 			};
@@ -215,7 +151,6 @@
 			projectRoot = "";
 			targets = (
 				4E75BC0B1A37713B00B21E97 /* XYAudioView */,
-				4E75BC241A37713B00B21E97 /* XYAudioViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -229,15 +164,6 @@
 				4E75BC531A37816900B21E97 /* LaunchScreen.xib in Resources */,
 				4E75BC551A37817200B21E97 /* Images.xcassets in Resources */,
 				4E75BC521A37816900B21E97 /* Main.storyboard in Resources */,
-				4E75BC4D1A37813600B21E97 /* Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E75BC231A37713B00B21E97 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4E75BC591A37824E00B21E97 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,30 +175,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E75BC4C1A37813600B21E97 /* main.m in Sources */,
-				4E75BC481A37812700B21E97 /* XYAppDelegate.m in Sources */,
-				4E75BC461A37812700B21E97 /* XYViewController.m in Sources */,
-				4E75BC491A37812700B21E97 /* XYAVAudioEngine.m in Sources */,
+				4E75BC481A37812700B21E97 /* AppDelegate.m in Sources */,
+				4E75BC461A37812700B21E97 /* ViewController.m in Sources */,
+				4E75BC491A37812700B21E97 /* BasicAVAudioEngine.m in Sources */,
 				4E75BC471A37812700B21E97 /* XYView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E75BC211A37713B00B21E97 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4E75BC571A37824500B21E97 /* XYAudioViewTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4E75BC271A37713B00B21E97 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4E75BC0B1A37713B00B21E97 /* XYAudioView */;
-			targetProxy = 4E75BC261A37713B00B21E97 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4E75BC4E1A37816900B21E97 /* Main.storyboard */ = {
@@ -307,15 +217,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -328,7 +242,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -349,8 +263,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -358,13 +274,14 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -376,9 +293,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RP89MENV25;
 				INFOPLIST_FILE = XYAudioView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.garynewby.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = XYAudioView;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -388,45 +307,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RP89MENV25;
 				INFOPLIST_FILE = XYAudioView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.garynewby.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = XYAudioView;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		4E75BC331A37713B00B21E97 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = XYAudioViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = XYAudioViewTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XYAudioView.app/XYAudioView";
-			};
-			name = Debug;
-		};
-		4E75BC341A37713B00B21E97 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = XYAudioViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = XYAudioViewTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XYAudioView.app/XYAudioView";
 			};
 			name = Release;
 		};
@@ -447,15 +334,6 @@
 			buildConfigurations = (
 				4E75BC301A37713B00B21E97 /* Debug */,
 				4E75BC311A37713B00B21E97 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4E75BC321A37713B00B21E97 /* Build configuration list for PBXNativeTarget "XYAudioViewTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4E75BC331A37713B00B21E97 /* Debug */,
-				4E75BC341A37713B00B21E97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

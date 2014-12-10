@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Gary Newby. All rights reserved.
 //
 
-#import "XYAppDelegate.h"
+#import "AppDelegate.h"
 
-@interface XYAppDelegate ()
+@interface AppDelegate ()
 
 @end
 
-@implementation XYAppDelegate
+@implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

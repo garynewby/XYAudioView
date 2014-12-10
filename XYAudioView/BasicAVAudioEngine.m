@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 Gary Newby. All rights reserved.
 //
 
-#import "XYAVAudioEngine.h"
+#import "BasicAVAudioEngine.h"
 #import <AVFoundation/AVFoundation.h>
 
 
-@interface XYAVAudioEngine ()
+@interface BasicAVAudioEngine ()
 
 @property(nonatomic, strong) AVAudioEngine *engine;
 @property(nonatomic, strong) AVAudioMixerNode *mainMixer;
@@ -19,13 +19,14 @@
 @property(nonatomic, strong) AVAudioPlayerNode *soundPlayer;
 @property(nonatomic, strong) AVAudioFormat *fxFormat;
 @property(nonatomic, strong) AVAudioFile *soundFile;
+@property(nonatomic, strong) AVAudioInputNode *inputNode;
 @property(nonatomic, assign) NSUInteger numOfChannels;
 @property(nonatomic, assign) float SR;
 
 @end
 
 
-@implementation XYAVAudioEngine
+@implementation BasicAVAudioEngine
 
 
 - (instancetype)init
@@ -35,39 +36,42 @@
 
         NSError *error;
         AVAudioSession *session = [AVAudioSession sharedInstance];
-        [session setCategory:AVAudioSessionCategoryPlayback error:&error];
+        [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
+        [session overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&error]; // quiet otherwise
         
         // Engine
-        self.engine = [[AVAudioEngine alloc] init];
-        self.mainMixer = [self.engine mainMixerNode];
-        self.mainMixer.outputVolume = 1;
-        self.numOfChannels = self.mainMixer.numberOfOutputs;
-        self.SR = [[self.mainMixer outputFormatForBus:0] sampleRate];
-        self.fxFormat = [self.mainMixer outputFormatForBus:0];
+        _engine = [[AVAudioEngine alloc] init];
+        
+        self.inputNode = self.engine.inputNode;
+
+        _mainMixer = [_engine mainMixerNode];
+        _mainMixer.outputVolume = 1;
+        _numOfChannels = _mainMixer.numberOfOutputs;
+        _SR = [[_mainMixer outputFormatForBus:0] sampleRate];
+        _fxFormat = [_mainMixer outputFormatForBus:0];
         
         // Reverb
-        self.reverb = [[AVAudioUnitReverb alloc] init];
-        [self.reverb loadFactoryPreset:AVAudioUnitReverbPresetMediumHall];
-        self.reverb.wetDryMix = 0.0;
-        [self.engine attachNode:self.reverb];
-        [self.engine connect:self.reverb to:self.mainMixer format:self.fxFormat];
+        _reverb = [[AVAudioUnitReverb alloc] init];
+        [_reverb loadFactoryPreset:AVAudioUnitReverbPresetMediumHall];
+        _reverb.wetDryMix = 0.0;
+        [_engine attachNode:_reverb];
+        [_engine connect:_reverb to:_mainMixer format:_fxFormat];
         
         // Delay
-        self.delay = [[AVAudioUnitDelay alloc] init];
-        self.delay.wetDryMix = 40.0;
-        self.delay.delayTime = 0.20;
-        self.delay.feedback = 60.0;
-        self.delay.lowPassCutoff = 16000.0;
-        [self.engine attachNode:self.delay];
-        [self.engine connect:self.delay to:self.reverb format:self.fxFormat];
+        _delay = [[AVAudioUnitDelay alloc] init];
+        _delay.wetDryMix = 40.0;
+        _delay.delayTime = 0.20;
+        _delay.feedback = 60.0;
+        _delay.lowPassCutoff = 16000.0;
+        [_engine attachNode:_delay];
+        [_engine connect:_delay to:_reverb format:_fxFormat];
         
         // Sound player
-        self.soundPlayer = [[AVAudioPlayerNode alloc] init];
-        [self.engine attachNode:self.soundPlayer];
-        [self.engine connect:self.soundPlayer to:self.delay format:self.fxFormat];
-    
-        [self.engine startAndReturnError:&error];
+        _soundPlayer = [[AVAudioPlayerNode alloc] init];
+        [_engine attachNode:_soundPlayer];
+        [_engine connect:_soundPlayer to:_delay format:_fxFormat];
         
+        [_engine startAndReturnError:&error];
         if (error) {
             NSLog(@"Error starting engine: %@", [error localizedDescription]);
         } else {
@@ -88,9 +92,7 @@
     }
     
     [self.soundPlayer play];
-    [self.soundPlayer scheduleFile:self.soundFile atTime:0 completionHandler:^ {
-        //
-    }];
+    [self.soundPlayer scheduleFile:self.soundFile atTime:0 completionHandler:nil];
 }
 
 - (void)soundPan:(float)value

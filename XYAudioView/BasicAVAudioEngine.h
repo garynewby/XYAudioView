@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XYAVAudioEngine : NSObject
+@interface BasicAVAudioEngine : NSObject
 
 - (void)playSoundFile:(NSString *)fileName;
 - (void)stopSoundFile;

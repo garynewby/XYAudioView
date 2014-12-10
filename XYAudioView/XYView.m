@@ -47,7 +47,7 @@
     _foreColour = [UIColor colorWithHue:hue saturation:saturation brightness:brightness*0.2 alpha:alpha];
     _name = @"--";
     _fsize = CGRectGetHeight(self.frame) * 0.05;
-    _font = [UIFont systemFontOfSize:12.0];
+    _font = [UIFont systemFontOfSize:14.0];
     _paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     _paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
     _paragraphStyle.alignment = NSTextAlignmentLeft;
@@ -63,35 +63,43 @@
 {
     self.touchIsDown = YES;
     UITouch *touch = [touches anyObject];
-    self.xyPosition = [touch locationInView:touch.view];
-    [self updateXY];
+   [self updateXY:[touch locationInView:touch.view]];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent*)event;
 {
     self.touchIsDown = YES;
     UITouch *touch = [touches anyObject];
-    self.xyPosition = [touch locationInView:touch.view];
-    [self updateXY];
+    [self updateXY:[touch locationInView:touch.view]];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     self.touchIsDown = NO;
     UITouch *touch = [touches anyObject];
-    self.xyPosition = [touch locationInView:touch.view];
-    [self updateXY];
+    [self updateXY:[touch locationInView:touch.view]];
 }
 
-- (void)updateXY
+- (void)updateXY:(CGPoint)point
 {
-    [self.delegate controlValueChanged:[self xyRange] name:self.name];
+    float x = [self clampToRange:point.x min:0 max:CGRectGetWidth(self.bounds)];
+    float y = [self clampToRange:point.y min:0 max:CGRectGetHeight(self.bounds)];
+    
+    self.xyPosition = CGPointMake(x, y);
+    
+    [self.delegate controlValueChanged:[self xyNormalised] name:self.name];
     [self setNeedsDisplay];
 }
 
-- (CGPoint)xyRange
+- (float)clampToRange:(float)x min:(float)min max:(float)max
 {
-    return CGPointMake(self.xyPosition.x/CGRectGetWidth(self.bounds) , self.xyPosition.y/CGRectGetHeight(self.bounds));
+    const float t = x < min ? min : x;
+    return t > max ? max : t;
+}
+
+- (CGPoint)xyNormalised
+{
+    return CGPointMake((self.xyPosition.x/CGRectGetWidth(self.bounds)), (self.xyPosition.y/CGRectGetHeight(self.bounds)));
 }
 
 - (void)layoutSubviews
@@ -115,7 +123,7 @@
     CGRect circleRect = CGRectOffset(CGRectMake(self.xyPosition.x, self.xyPosition.y, 40, 40), -20, -20);
     CGContextAddEllipseInRect(currentContext, circleRect);
     CGContextStrokePath(currentContext);
-    CGPoint xy = [self xyRange];
+    CGPoint xy = [self xyNormalised];
     NSString *text = [NSString stringWithFormat:@"%@   x: %1.2f  y: %1.2f", self.name, xy.x, xy.y];
     CGSize size = [text sizeWithAttributes:self.fontAttributes];
     [text drawInRect:CGRectMake(self.fsize, self.fsize, size.width, size.height) withAttributes:self.fontAttributes];

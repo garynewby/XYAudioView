@@ -1,69 +1,52 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="XYViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="568" placeholderIntrinsicHeight="170" translatesAutoresizingMaskIntoConstraints="NO" id="Ab0-Rp-gz7" userLabel="xyViewA" customClass="XYView">
-                                <rect key="frame" x="16" y="42" width="568" height="170"/>
-                                <color key="backgroundColor" red="0.0" green="0.28840659372118344" blue="0.58918606505102034" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="16" y="215" width="768" height="178"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="215" width="768" height="178"/>
-                                </variation>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="568" placeholderIntrinsicHeight="170" translatesAutoresizingMaskIntoConstraints="NO" id="nEO-N6-wPB" userLabel="xyViewB" customClass="XYView">
-                                <rect key="frame" x="16" y="226" width="568" height="170"/>
-                                <color key="backgroundColor" red="0.28555373708255799" green="0.24792286682670472" blue="0.53922193877551017" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="16" y="401" width="368" height="171"/>
-                                </variation>
-                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="16" y="414" width="768" height="156"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="414" width="768" height="156"/>
-                                </variation>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="568" placeholderIntrinsicHeight="170" translatesAutoresizingMaskIntoConstraints="NO" id="xKL-Ea-uNi" userLabel="xyViewC" customClass="XYView">
-                                <rect key="frame" x="16" y="410" width="568" height="170"/>
-                                <color key="backgroundColor" red="0.28260733804007726" green="0.46217315051020413" blue="0.28626439108576124" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="16" y="401" width="368" height="171"/>
-                                </variation>
-                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="16" y="414" width="768" height="156"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="414" width="768" height="156"/>
-                                </variation>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tR5-2K-t2c">
+                                <rect key="frame" x="10" y="10" width="355" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="170" translatesAutoresizingMaskIntoConstraints="NO" id="Ab0-Rp-gz7" userLabel="xyViewA" customClass="XYView">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="209"/>
+                                        <color key="backgroundColor" red="0.0" green="0.28840659372118344" blue="0.58918606505102034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="170" translatesAutoresizingMaskIntoConstraints="NO" id="nEO-N6-wPB" userLabel="xyViewB" customClass="XYView">
+                                        <rect key="frame" x="0.0" y="219" width="355" height="209"/>
+                                        <color key="backgroundColor" red="0.28555373708255799" green="0.24792286682670472" blue="0.53922193877551017" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="170" translatesAutoresizingMaskIntoConstraints="NO" id="xKL-Ea-uNi" userLabel="xyViewC" customClass="XYView">
+                                        <rect key="frame" x="0.0" y="438" width="355" height="209"/>
+                                        <color key="backgroundColor" red="0.28260733804007726" green="0.46217315051020413" blue="0.28626439108576124" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.64652490620000003" green="0.64376747609999996" blue="0.6494008899" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tR5-2K-t2c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="KTT-Mc-Hyi"/>
+                            <constraint firstItem="tR5-2K-t2c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="RC5-RJ-OQy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tR5-2K-t2c" secondAttribute="bottom" constant="10" id="XJe-43-qKW"/>
+                            <constraint firstAttribute="trailing" secondItem="tR5-2K-t2c" secondAttribute="trailing" constant="10" id="vvt-DF-fw3"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="xyViewA" destination="Ab0-Rp-gz7" id="loT-sC-8ze"/>
                         <outlet property="xyViewB" destination="nEO-N6-wPB" id="EeP-NL-lr2"/>
